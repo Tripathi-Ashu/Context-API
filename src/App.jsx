@@ -1,10 +1,18 @@
+import {useState} from 'react'
 
+import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
+import Body from './components/Body.jsx'
 
 function App() {
+   
+   const [count , setCount] = useState(0);
 
    return ( 
     <>
-     <h1> Hii I am Ashutosh </h1>
+      <Header count ={count}></Header>
+      <Body count={count}  setCount={setCount}></Body>
+      <Footer></Footer>
     </>
    )
 }
